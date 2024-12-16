@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user-service/")
+@RequestMapping("/")
 public class UserController {
 
     private Environment env;
@@ -33,7 +33,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/heath_check")
+    @GetMapping("/health_check")
     public String status() {
         return String.format("It's Working in User Service on PORT %s",
                 env.getProperty("local.server.port"));
