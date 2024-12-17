@@ -42,9 +42,10 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
         http.headers().frameOptions().disable();    // 이게 있어야 h2-console 접근 가능
     }
 
+    //AuthenticationFilter 객체를 생성하고 반환하는 역할
     private AuthenticationFilter getAuthenticationFilter() throws Exception {
-        AuthenticationFilter authenticationFilter = new AuthenticationFilter();
-        authenticationFilter.setAuthenticationManager(authenticationManager()); // 인증 처리를 하기 위한 메니저
+        AuthenticationFilter authenticationFilter = new AuthenticationFilter(authenticationManager(), userService, env);
+//        authenticationFilter.setAuthenticationManager(authenticationManager()); // 인증 처리를 하기 위한 메니저
 
         return authenticationFilter;
     }
