@@ -34,6 +34,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
 //        http.authorizeRequests().antMatchers("/users/**").permitAll();
         //authorizeRequests : 허용할 수 있는 작업을 제약 , /users/** 를 가져야만 통과
 
+        http.authorizeRequests().antMatchers("/actuator/**").permitAll();
         http.authorizeRequests().antMatchers("/**")
                 .hasIpAddress("127.0.0.1")
                 .and()
