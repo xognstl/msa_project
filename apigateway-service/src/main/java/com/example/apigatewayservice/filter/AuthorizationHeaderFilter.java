@@ -52,6 +52,7 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
 
         String subject = null;
         try {
+            System.out.println(env.getProperty("token.secret"));
             subject = Jwts.parser().setSigningKey(env.getProperty("token.secret"))
                     .parseClaimsJws(jwt).getBody()
                     .getSubject();  // 토큰을 문자형 데이터 값으로 파싱하기 위해 parseClaimsJws로 파싱 , subject 값만 추출
