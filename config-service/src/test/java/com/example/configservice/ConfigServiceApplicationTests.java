@@ -8,6 +8,7 @@ class ConfigServiceApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println("~ = ");
     }
 
 }
