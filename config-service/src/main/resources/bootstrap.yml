@@ -2,6 +2,7 @@
 #  key: abcdefghdsaflkjqweiasdk1234567890
 encrypt:
   key-store:
-    location: file:///F:\msa_project\keystore\apiEncryptionKey.jks
+#    location: file:///F:\msa_project\keystore\apiEncryptionKey.jks
+    location: file:/apiEncryptionKey.jks
     password: test1234
     alias: apiEncryptionKey

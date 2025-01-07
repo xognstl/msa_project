@@ -14,10 +14,10 @@ spring:
   cloud:
     config:
       server:
-        native:
-          search-locations: F:\\msa_project\\native-file-repo
         git:
-          uri: F:\msa_project\git-local-repo
+          uri: https://github.com/xognstl/spring-cloud-config
+        native:
+          search-locations: file:/ecommerce.yml
 
 management:
   endpoints:
